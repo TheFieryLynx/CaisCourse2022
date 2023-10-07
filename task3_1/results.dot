@@ -1,0 +1,243 @@
+strict digraph {
+"00000000004004F0" [ shape = box, label = "00000000004004F0
+xor ebp, ebp
+mov r9, rdx
+pop rsi
+mov rdx, rsp
+and rsp, 0xfffffffffffffff0
+push rax
+push rsp
+mov r8, 0x4006c0
+mov rcx, 0x400650
+mov rdi, 0x4004a0
+call 0x400470" ];
+"00000000004004F0" -> "__libc_start_main@plt"
+"__libc_start_main@plt" [ label = "__libc_start_main@plt" ];
+"__libc_start_main@plt" -> "0000000000400650"
+"0000000000400650" [ shape = box, label = "0000000000400650
+push r15
+push r14
+mov r15d, edi
+push r13
+push r12
+lea r12, ptr [rip+0x2007ae]
+push rbp
+lea rbp, ptr [rip+0x2007ae]
+push rbx
+mov r14, rsi
+mov r13, rdx
+sub rbp, r12
+sub rsp, 0x8
+sar rbp, 0x3
+call 0x400428" ];
+"0000000000400650" -> "0000000000400428"
+"0000000000400428" [ shape = box, label = "0000000000400428
+sub rsp, 0x8
+mov rax, qword ptr [rip+0x200bc5]
+test rax, rax
+jz 0x40043d" ];
+"0000000000400428" -> "000000000040043D"
+"000000000040043D" [ shape = box, label = "000000000040043D
+add rsp, 0x8
+ret " ];
+"000000000040043D" -> "0000000000400681"
+"0000000000400681" [ shape = box, label = "0000000000400681
+test rbp, rbp
+jz 0x4006a6" ];
+"0000000000400681" -> "0000000000400686"
+"0000000000400686" [ shape = box, label = "0000000000400686
+xor ebx, ebx
+nop dword ptr [rax+rax*1], eax
+mov rdx, r13
+mov rsi, r14
+mov edi, r15d
+call qword ptr [r12+rbx*8]" ];
+"0000000000400686" -> "00000000004005C0"
+"00000000004005C0" [ shape = box, label = "00000000004005C0
+mov edi, 0x600e20
+cmp qword ptr [rdi], 0x0
+jnz 0x4005d0" ];
+"00000000004005C0" -> "00000000004005CB"
+"00000000004005CB" [ shape = box, label = "00000000004005CB
+jmp 0x400560" ];
+"00000000004005CB" -> "0000000000400560"
+"0000000000400560" [ shape = box, label = "0000000000400560
+mov esi, 0x601078
+push rbp
+sub rsi, 0x601078
+sar rsi, 0x3
+mov rbp, rsp
+mov rax, rsi
+shr rax, 0x3f
+add rsi, rax
+sar rsi, 0x1
+jz 0x400598" ];
+"0000000000400560" -> "0000000000400598"
+"0000000000400598" [ shape = box, label = "0000000000400598
+pop rbp
+ret " ];
+"0000000000400598" -> "000000000040069D"
+"000000000040069D" [ shape = box, label = "000000000040069D
+add rbx, 0x1
+cmp rbx, rbp
+jnz 0x400690" ];
+"000000000040069D" -> "00000000004006A6"
+"00000000004006A6" [ shape = box, label = "00000000004006A6
+add rsp, 0x8
+pop rbx
+pop rbp
+pop r12
+pop r13
+pop r14
+pop r15
+ret " ];
+"00000000004006A6" -> "00000000004004A0"
+"00000000004004A0" [ shape = box, label = "00000000004004A0
+push rax
+mov esi, 0x6
+mov edi, 0x601060
+call 0x4005e6" ];
+"00000000004004A0" -> "00000000004005E6"
+"00000000004005E6" [ shape = box, label = "00000000004005E6
+xor edx, edx" ];
+"00000000004005E6" -> "00000000004005E8"
+"00000000004005E8" [ shape = box, label = "00000000004005E8
+cmp rdx, rsi
+jz 0x400615" ];
+"00000000004005E8" -> "00000000004005ED"
+"00000000004005ED" [ shape = box, label = "00000000004005ED
+lea rax, ptr [rsi-0x1]" ];
+"00000000004005ED" -> "00000000004005F1"
+"00000000004005F1" [ shape = box, label = "00000000004005F1
+cmp rdx, rax
+jz 0x400610" ];
+"00000000004005F1" -> "00000000004005F6"
+"00000000004005F6" [ shape = box, label = "00000000004005F6
+mov ecx, dword ptr [rdi+rax*4]
+mov r8d, dword ptr [rdi+rax*4-0x4]
+cmp ecx, r8d
+jnl 0x40060b" ];
+"00000000004005F6" -> "0000000000400603"
+"0000000000400603" [ shape = box, label = "0000000000400603
+mov dword ptr [rdi+rax*4], r8d
+mov dword ptr [rdi+rax*4-0x4], ecx" ];
+"0000000000400603" -> "000000000040060B"
+"000000000040060B" [ shape = box, label = "000000000040060B
+dec rax
+jmp 0x4005f1" ];
+"000000000040060B" -> "00000000004005F1"
+"00000000004005F1" [ shape = box, label = "00000000004005F1
+cmp rdx, rax
+jz 0x400610" ];
+"00000000004005F1" -> "0000000000400610"
+"0000000000400610" [ shape = box, label = "0000000000400610
+inc rdx
+jmp 0x4005e8" ];
+"0000000000400610" -> "00000000004005E8"
+"00000000004005F6" [ shape = box, label = "00000000004005F6
+mov ecx, dword ptr [rdi+rax*4]
+mov r8d, dword ptr [rdi+rax*4-0x4]
+cmp ecx, r8d
+jnl 0x40060b" ];
+"00000000004005F6" -> "000000000040060B"
+"00000000004005E8" [ shape = box, label = "00000000004005E8
+cmp rdx, rsi
+jz 0x400615" ];
+"00000000004005E8" -> "0000000000400615"
+"0000000000400615" [ shape = box, label = "0000000000400615
+ret " ];
+"0000000000400615" -> "00000000004004B0"
+"00000000004004B0" [ shape = box, label = "00000000004004B0
+mov esi, 0x7
+mov edi, 0x601040
+call 0x4005e6" ];
+"00000000004004B0" -> "00000000004005E6"
+"0000000000400615" [ shape = box, label = "0000000000400615
+ret " ];
+"0000000000400615" -> "00000000004004BF"
+"00000000004004BF" [ shape = box, label = "00000000004004BF
+mov esi, 0x6
+mov edi, 0x601060
+call 0x400616" ];
+"00000000004004BF" -> "0000000000400616"
+"0000000000400616" [ shape = box, label = "0000000000400616
+push r12
+mov r12, rdi
+push rbp
+mov rbp, rsi
+push rbx
+xor ebx, ebx" ];
+"0000000000400616" -> "0000000000400622"
+"0000000000400622" [ shape = box, label = "0000000000400622
+cmp rbx, rbp
+jz 0x400641" ];
+"0000000000400622" -> "0000000000400627"
+"0000000000400627" [ shape = box, label = "0000000000400627
+mov edx, dword ptr [r12+rbx*4]
+mov esi, 0x4006d4
+mov edi, 0x1
+xor eax, eax
+inc rbx
+call 0x400480" ];
+"0000000000400627" -> "__printf_chk@plt"
+"__printf_chk@plt" [ label = "__printf_chk@plt" ];
+"__printf_chk@plt" -> "000000000040063F"
+"000000000040063F" [ shape = box, label = "000000000040063F
+jmp 0x400622" ];
+"000000000040063F" -> "0000000000400622"
+"0000000000400622" [ shape = box, label = "0000000000400622
+cmp rbx, rbp
+jz 0x400641" ];
+"0000000000400622" -> "0000000000400641"
+"0000000000400641" [ shape = box, label = "0000000000400641
+pop rbx
+pop rbp
+pop r12
+mov edi, 0xa
+jmp 0x400460" ];
+"0000000000400641" -> "putchar@plt"
+"putchar@plt" [ label = "putchar@plt" ];
+"putchar@plt" -> "00000000004004CE"
+"00000000004004CE" [ shape = box, label = "00000000004004CE
+mov esi, 0x7
+mov edi, 0x601040
+call 0x400616" ];
+"00000000004004CE" -> "0000000000400616"
+"putchar@plt" [ label = "putchar@plt" ];
+"putchar@plt" -> "00000000004004DD"
+"00000000004004DD" [ shape = box, label = "00000000004004DD
+xor eax, eax
+pop rdx
+ret " ];
+"00000000004004DD" -> "00000000004005A0"
+"00000000004005A0" [ shape = box, label = "00000000004005A0
+cmp byte ptr [rip+0x200ad1], 0x0
+jnz 0x4005ba" ];
+"00000000004005A0" -> "00000000004005A9"
+"00000000004005A9" [ shape = box, label = "00000000004005A9
+push rbp
+mov rbp, rsp
+call 0x400520" ];
+"00000000004005A9" -> "0000000000400520"
+"0000000000400520" [ shape = box, label = "0000000000400520
+mov eax, 0x60107f
+push rbp
+sub rax, 0x601078
+cmp rax, 0xe
+mov rbp, rsp
+jbe 0x400550" ];
+"0000000000400520" -> "0000000000400550"
+"0000000000400550" [ shape = box, label = "0000000000400550
+pop rbp
+ret " ];
+"0000000000400550" -> "00000000004005B2"
+"00000000004005B2" [ shape = box, label = "00000000004005B2
+pop rbp
+mov byte ptr [rip+0x200abe], 0x1
+ret " ];
+"00000000004005B2" -> "00000000004006C4"
+"00000000004006C4" [ shape = box, label = "00000000004006C4
+sub rsp, 0x8
+add rsp, 0x8
+ret " ];
+}
